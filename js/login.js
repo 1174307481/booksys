@@ -6,6 +6,7 @@ $(document).ready(function() {
 
         if (username === 'admin' && password === '123456') {
             sessionStorage.setItem('username', username);
+            sessionStorage.setItem('loggedIn', 'true'); // 设置登录状态
             alert('登录成功！');
             window.location.href = 'index.html'; // 登录成功后跳转到index.html
         } else {

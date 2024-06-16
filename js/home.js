@@ -1,4 +1,10 @@
 $(document).ready(function() {
+    // 检查登录状态
+    if (!sessionStorage.getItem('loggedIn')) {
+        window.location.href = 'login.html';
+        return; // 阻止后续代码执行
+    }
+
     $('#logoutBtn').click(function() {
         sessionStorage.clear();
         window.location.href = 'login.html';
@@ -22,9 +28,9 @@ $(document).ready(function() {
         submenu.slideToggle(300, function() {
             const icon = $(this).prev('.menu-toggle').find('.toggle-icon');
             if (submenu.is(':visible')) {
-                icon.attr('src', 'img/up.svg');
+                icon.attr('src', '../img/up.svg');
             } else {
-                icon.attr('src', 'img/down.svg');
+                icon.attr('src', '../img/down.svg');
             }
         });
     });
@@ -45,7 +51,7 @@ $(document).ready(function() {
     const firstMenuToggle = $('.menu-toggle').first();
     const firstSubmenu = firstMenuToggle.next('.submenu');
     firstSubmenu.show();
-    firstMenuToggle.find('.toggle-icon').attr('src', 'img/up.svg');
+    firstMenuToggle.find('.toggle-icon').attr('src', '../img/up.svg');
 
     // const firstLink = firstSubmenu.find('a').first();
     // firstLink.addClass('active');
