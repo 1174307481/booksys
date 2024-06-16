@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图书列表</title>
+    <link rel="stylesheet" href="/css/list.css">
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <div class="content">
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="请输入书名">
+            <button id="searchBtn">
+                <img src="/img/search.svg" alt="">
+            </button>
+        </div>
+        <table class="table" id="bookTable">
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>书名</th>
+                    <th>价格</th>
+                    <th>出版社</th>
+                    <th>出版日期</th>
+                    <th>联系</th>
+                    <th>地址</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 图书数据将通过 JavaScript 动态生成 -->
+            </tbody>
+        </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/list.js"></script>
+</body>
+</html>
