@@ -7,7 +7,7 @@ $(document).ready(function() {
         if (username === 'admin' && password === '123456') {
             sessionStorage.setItem('username', username);
             alert('登录成功！');
-            window.location.href = 'home.html'; // 登录成功后跳转到home.html
+            window.location.href = 'index.html'; // 登录成功后跳转到index.html
         } else {
             alert('用户名或密码错误');
         }
